@@ -78,7 +78,7 @@ export default class Login extends Component {
     }
     state = {
         logo: [],
-        email:'admin',
+        email:'user19',
         password:'123456'
     }
     componentDidMount() {
