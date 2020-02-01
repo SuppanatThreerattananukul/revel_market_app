@@ -43,10 +43,12 @@ export class ShopDetail extends React.Component {
                         alert: 'network-failed',
                     });
                 }else if (response.data.length == 0) {
+                   
                     this.setState({
                         loading: false,
                         alert: 'not-found',
                     });
+                   
                 }else{
                     this.setState({ 
                         loading: false,
@@ -66,7 +68,8 @@ export class ShopDetail extends React.Component {
             if (this.state.alert == 'network-failed') {
                 display_data.push(<NetworkFailed/>);
             }else if (this.state.alert == 'not-found') {
-                display_data.push(<NotFound/>);
+                this.props.navigation.navigate('Home')
+                // display_data.push(<NotFound/>);
             }else{
                 display_data.push(
                     <View>

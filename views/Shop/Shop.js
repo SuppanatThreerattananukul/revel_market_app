@@ -64,6 +64,7 @@ export default class Shop extends React.Component {
 
 
     _onQRCodeScanDone = (qr_code) => {
+        // alert(qr_code)
         if (qr_code != '') {
             this.setState({
                 isCameraVisible:false
@@ -137,7 +138,7 @@ export default class Shop extends React.Component {
                 {this.state.isCameraVisible == true ?
 
                     <CameraKitCameraScreen
-                        showFrame={false}
+                        showFrame={true}
                         scanBarcode={true}
                         laserColor={'#FF3D00'}
                         frameColor={'#00C853'}
